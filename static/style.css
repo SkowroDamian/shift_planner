@@ -1,0 +1,44 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    /* color: white */
+}
+.calendar {
+    padding: 10px;
+    display: grid;
+    /* grid-template-kolumn określa ilość kolumn w gridzie, fr to kolumna a cyferka przed oznacza jej wielkość */
+    grid-template-columns: repeat(3, 1fr); 
+    /* repeat(x, y) powtarza x razy wartość y, nie trzeba wpisywać x razy tego samego ręcznie */
+    /* grid-template-columns: 2fr 1fr 1fr; */
+    /* grid-template-rows: 1fr 1fr; */
+    /* grid template rows ustawia wysokość rzędów w podobny sposób jak grid-template-columns ustawia kolumny */
+    /* grid-column-gap: 3px;
+    grid-row-gap: 3px; */
+    row-gap: 5px;
+    column-gap: 5px;
+}
+
+.calendar-card {
+    /* background-color: gray; */
+    font-family: 'hobeaux-rococeaux-background', Helvetica;
+    font-size: 70px;
+    color: white;
+    /* background-color: gray; */
+    background: linear-gradient(to bottom right, #8e44ad, #5d3b99);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* poniej ustawienia responsywności strony na rónych rozmiarach ekranu */
+@media screen and (min-width: 500px) {
+    .calendar {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .calendar {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
